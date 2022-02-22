@@ -6,16 +6,22 @@ h3 {
   font-weight: 900;
 }
 * {
+  /* display: block; */
   margin: 0;
+}
+body {
+  background-color: #323232;
+  position: relative;
 }
 h2 {
   font-size: 50px;
+  position: relative;
   font-family: sans-serif;
   text-transform: lowercase;
   color: purple;
   font-style: normal;
   line-height: 1;
-  background-color: brown;
+  /* background-color: brown; */
 }
 
 li {
@@ -54,8 +60,27 @@ li:nth-child(odd) {
 }
 
 article h2:first-child {
-  background-color: black;
-  font-size: 200px;
+  /* background-color: black; */
+  font-size: 50px;
+}
+
+article h2::after {
+  content: "Trending";
+  position: absolute;
+  background-color: bisque;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: black;
+  padding: 5px;
+  border: 1px solid greenyellow;
+  top: -5px;
+  right: -5px;
+  /* bottom: 100%; */
+}
+
+article h2::first-letter {
+  text-transform: uppercase;
+  padding: 20px;
 }
 
 a:link {
@@ -79,6 +104,44 @@ a:active {
   height: 250px;
 }
 .container {
-  width: 100%;
+  /* display: inline; */
+  width: 80%;
   margin: 0px auto;
+}
+
+.p1 {
+  display: inline;
+  /* color: blue; */
+}
+
+.p2 {
+  /* display: inline; */
+  position: absolute;
+  top: 100px;
+}
+
+nav a:link {
+  /* color: red; */
+  /* display: inline-block; */
+}
+
+.b1 {
+  background-color: blue;
+}
+
+.like {
+  padding: 20px;
+  font-weight: 900;
+  /* position: relative; */
+  top: auto;
+  bottom: 20px;
+  left: auto;
+  right: 20px;
+  /* left: 100%; */
+  /* right: 10%; */
+}
+
+p::first-letter {
+  font-size: 100px;
+  color: #fff;
 }
