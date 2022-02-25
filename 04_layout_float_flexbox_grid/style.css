@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-  width: 1200px;
+  width: 95%;
   /* margin-left: auto;
   margin-right: auto; */
   margin: 0 auto;
@@ -51,7 +51,7 @@ aside {
   /* padding-top: 50px;
   padding-bottom: 50px; */
   padding: 50px 0;
-  width: 500px;
+  width: 600px;
 }
 
 /* SMALLER ELEMENTS */
@@ -117,15 +117,17 @@ li:last-child {
 #author {
   font-style: italic;
   font-size: 18px;
+  margin-bottom: 0px;
 }
 
 #copyright {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .related-author {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 12px;
+  /* font-weight: bold; */
+  /* margin-bottom: 0px; */
 }
 
 /* ul {
@@ -266,28 +268,28 @@ nav p {
   font-size: 18px;
 } */
 
-header h1:first-child {
+/* header h1:first-child {
   float: left;
-  /* margin-right: 20px; */
+  /* margin-right: 20px; 
 }
 
 header nav {
   float: right;
-}
+} */
 
-article {
-  /* background-color: #1098ad; */
+/* article {
+  background-color: #1098ad; 
   width: 800px;
   float: left;
-}
+} */
 
-aside {
+/* aside {
   /* background-color: #ffe70e; */
-  width: 320px;
+/* width: 320px;
   /* padding: 0 40px; */
-  box-sizing: border-box;
-  float: right;
-}
+/* box-sizing: border-box; */
+/* float: right; */
+/* } */
 
 /* footer::after {
   clear: both;
@@ -295,7 +297,57 @@ aside {
   display: block;
   background-color: blueviolet;
 } */
-
+/* 
 footer {
   clear: both;
+} */
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.together {
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+  /* margin: 100px 0; */
+}
+
+#together-aside {
+  flex-shrink: 1;
+  width: 30%;
+}
+
+.profile-side {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 10px 0;
+}
+
+#author-image {
+  clip-path: circle();
+}
+
+#together-article {
+  width: 70%;
+}
+
+.related li {
+  display: flex;
+  gap: 10px;
+  padding-right: 10px;
+}
+
+.side-data {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-end; */
+  gap: 10px;
+}
+#related-posts {
+  margin-bottom: 25px;
 }
