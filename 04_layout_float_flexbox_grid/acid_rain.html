@@ -7,17 +7,51 @@
     <title>Acid Rain</title>
   </head>
   <body>
-    <div id="main"></div>
+    <div id="main">
+      <div id="one"></div>
+      <div id="two"></div>
+      <div id="three"></div>
+    </div>
     <style>
       * {
         margin: 0;
         box-sizing: border-box;
       }
       #main {
+        position: relative;
         display: flex;
         width: 100%;
         height: 100%;
         background: #0b2429;
+        justify-content: center;
+        align-items: center;
+      }
+      #two {
+        width: 120;
+        height: 120;
+        background: #998235;
+        border-radius: 50% 0 50% 50%;
+        z-index: 1;
+      }
+      #one {
+        position: absolute;
+        top: 150;
+        left: 80;
+        width: 120;
+        height: 120;
+        background: #f3ac3c;
+        border-radius: 50% 0 50% 50%;
+        z-index: 2;
+      }
+      #three {
+        position: absolute;
+        top: 30;
+        right: 80;
+        width: 120;
+        height: 120;
+        background: #f3ac3c;
+        border-radius: 50% 50% 50% 50%;
+        z-index: 0;
       }
     </style>
   </body>
