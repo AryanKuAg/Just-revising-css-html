@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Equals</title>
+  </head>
+  <body>
+    <div id="main">
+      <div id="one" class="c"></div>
+      <div id="two" class="c"></div>
+    </div>
+    <style>
+      * {
+        margin: 0;
+      }
+      #main {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: #aa445f;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .c {
+        height: 100px;
+        width: 200px;
+        border-radius: 150px 150px 0 0;
+      }
+      #one {
+        position: absolute;
+        left: 23;
+        transform: rotate(270deg);
+        background: #f7ec7d;
+      }
+      #two {
+        position: absolute;
+        right: 23;
+        transform: rotate(90deg);
+        background: #e38f66;
+      }
+    </style>
+  </body>
+</html>
