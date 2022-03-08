@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Not Simply Square</title>
+  </head>
+  <body>
+    <div id="a"></div>
+    <div id="b"><div></div></div>
+    <div id="c"><div></div></div>
+    <div id="d"></div>
+    <style>
+      body {
+        display: grid;
+        grid-template-columns: 200px 100px;
+        grid-template-rows: 200px 100px;
+        margin: 0;
+        background: #293462;
+      }
+      div {
+        background: #fe5f55;
+      }
+      #a {
+        background: #fff1c1;
+      }
+      #d {
+        background: #293462;
+      }
+      #b {
+        display: flex;
+        align-items: flex-end;
+      }
+      #b div {
+        background: #a64942;
+        width: 100;
+        height: 50;
+      }
+      #c {
+        display: flex;
+        justify-content: flex-end;
+      }
+      #c div {
+        background: #a64942;
+        width: 50;
+        height: 100;
+      }
+    </style>
+  </body>
+</html>
