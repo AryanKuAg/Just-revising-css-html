@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gift Box</title>
+  </head>
+  <body>
+    <div id="a">
+      <div id="aa"><div></div></div>
+      <div id="ab"><div></div></div>
+    </div>
+    <div id="b"></div>
+    <div id="c">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <style>
+      body {
+        margin: 0;
+        margin-top: 40;
+        background: #ac474b;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #a {
+        margin-left: 10;
+        position: relative;
+        width: 80px;
+        display: flex;
+        height: 50px;
+        align-items: flex-end;
+      }
+      #b {
+        width: 100px;
+        height: 20px;
+        background: #ac474b;
+      }
+      #c {
+        display: grid;
+        grid-template-columns: 60px 60px;
+        grid-template-rows: 60px 60px;
+        column-gap: 20px;
+        row-gap: 20px;
+        width: 140px;
+        height: 140px;
+        background: #ac474b;
+      }
+      #c div {
+        width: 60px;
+        height: 60px;
+        background: #fff;
+      }
+      #aa {
+        width: 40;
+        height: 40;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px 50px 0 50px;
+      }
+      #ab {
+        position: absolute;
+        left: 30;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40;
+        height: 40;
+        background: #fff;
+        border-radius: 50px 50px 50px 0;
+      }
+      #aa div {
+        width: 20;
+        height: 20;
+        background: #ac474b;
+        border-radius: 50px 50px 0 50px;
+      }
+      #ab div {
+        width: 20;
+        height: 20;
+        background: #ac474b;
+        border-radius: 50px 50px 50px 0;
+      }
+    </style>
+  </body>
+</html>
