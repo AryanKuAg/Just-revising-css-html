@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Candle</title>
+  </head>
+  <body>
+    <div id="main">
+      <div id="a"></div>
+      <div id="b">
+        <div id="x"></div>
+        <div id="y"></div>
+        <div id="z"></div>
+      </div>
+    </div>
+    <style>
+      body {
+        margin: 0;
+        background: #14313e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #main {
+        width: 80px;
+        height: 180px;
+      }
+      #a {
+        width: 30px;
+        float: right;
+        z-index: 9;
+        height: 50px;
+        margin-bottom: 15px;
+        margin-right: 10px;
+        background: #f3ac3c;
+        border-radius: 50px 0px 50px 0px;
+      }
+      #b {
+        display: flex;
+        justify-content: center;
+        width: 80px;
+        position: relative;
+        margin-bottom: 40px;
+
+        height: 100px;
+        background: #ba3e46;
+      }
+      #x {
+        position: absolute;
+
+        top: -15;
+        width: 80px;
+        height: 30px;
+        background: #f3695a;
+        border-radius: 100% 100% 100% 100%;
+      }
+      #z {
+        position: absolute;
+
+        top: -16;
+        width: 60px;
+        height: 20px;
+        background: #14313e;
+        border-radius: 100% 100% 100% 100%;
+      }
+      #y {
+        position: absolute;
+        bottom: -15;
+        width: 80px;
+        height: 30px;
+        background: #ba3e46;
+        border-radius: 100% 100% 100% 100%;
+      }
+    </style>
+  </body>
+</html>
