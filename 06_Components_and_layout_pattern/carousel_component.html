@@ -18,7 +18,7 @@
         font-size: 14px;
         height: 200px;
         width: 550px;
-        margin: 60px auto;
+        margin: 30px auto;
         background-color: rgb(31, 110, 56);
         box-shadow: 1px 1px 5px rgb(55, 55, 55);
         border-radius: 10px;
@@ -41,6 +41,47 @@
         height: 110%;
         width: auto;
       }
+
+      .back-card::after,
+      .back-card::before {
+        position: absolute;
+        content: ">";
+        color: green;
+        background-color: white;
+        box-shadow: 1px 1px 20px rgb(55, 55, 55);
+        border-radius: 10px;
+        height: 20px;
+        width: 20px;
+        right: -10px;
+        top: 90px;
+        /* border: 1px solid black; */
+        font-weight: 900;
+      }
+
+      .back-card::before {
+        content: "<";
+        left: -10px;
+      }
+      .carousel-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .balls {
+        display: flex;
+        gap: 5px;
+      }
+      .balls div {
+        height: 10px;
+        width: 10px;
+        border-radius: 100%;
+        border: 3px solid green;
+      }
+
+      .balls div:first-child {
+        background-color: green;
+      }
     </style>
   </head>
   <body>
@@ -62,6 +103,12 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt!
           </p>
         </div>
+      </div>
+      <div class="balls">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
     </div>
   </body>
