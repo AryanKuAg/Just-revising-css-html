@@ -5,6 +5,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Table</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Nunito", sans-serif;
+      }
+
+      .table {
+        margin: 50px auto;
+        border-spacing: 0;
+      }
+      .table-head {
+        background-color: green;
+      }
+
+      tr:nth-child(even) {
+        background-color: rgb(166, 164, 164);
+      }
+      tr:nth-child(odd) {
+        background-color: white;
+      }
+
+      thead tr th {
+        background-color: rgb(44, 179, 112);
+        color: white;
+      }
+      td,
+      th {
+        padding: 5px 15px;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <table class="table">
+      <thead class="table-head">
+        <tr>
+          <th>Chair</th>
+          <th>The Laid Back</th>
+          <th>The Worker Bee</th>
+          <th>The Chair 4/2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Width</td>
+          <td>80 cm</td>
+          <td>35 cm</td>
+          <td>62 cm</td>
+        </tr>
+        <tr>
+          <td>Height</td>
+          <td>23 cm</td>
+          <td>99 cm</td>
+          <td>55 cm</td>
+        </tr>
+        <tr>
+          <td>Depth</td>
+          <td>66 cm</td>
+          <td>33 cm</td>
+          <td>22 cm</td>
+        </tr>
+        <tr>
+          <td>Depth</td>
+          <td>66 cm</td>
+          <td>33 cm</td>
+          <td>22 cm</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
 </html>
