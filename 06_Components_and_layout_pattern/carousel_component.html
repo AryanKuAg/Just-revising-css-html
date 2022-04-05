@@ -5,6 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carousel Component</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .back-card {
+        position: relative;
+        display: flex;
+        padding-left: 30px;
+        font-size: 14px;
+        height: 200px;
+        width: 550px;
+        margin: 60px auto;
+        background-color: rgb(31, 110, 56);
+        box-shadow: 1px 1px 5px rgb(55, 55, 55);
+        border-radius: 10px;
+      }
+      .about-ipsum {
+        color: white;
+        margin-left: auto;
+        width: 300px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .ipsum-image {
+        box-shadow: 1px 1px 5px rgb(55, 55, 55);
+
+        border-radius: 10px;
+        position: absolute;
+        top: -10px;
+        height: 110%;
+        width: auto;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="carousel-container">
+      <div class="back-card">
+        <img
+          src="https://picsum.photos/200"
+          alt="Lorem ipsum"
+          class="ipsum-image"
+        />
+        <div class="about-ipsum">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
+            commodi odio cum quibusdam quisquam doloribus sapiente atque, minus
+            nostrum esse aperiam repellendus impedit quam enim? Quisquam
+            asperiores possimus reprehenderit porro.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt!
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
