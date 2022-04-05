@@ -5,6 +5,101 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pagination</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        margin: 100px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .page {
+        border: none;
+        border-radius: 100px;
+        background-color: white;
+        height: 32px;
+        width: 32px;
+        font-weight: bold;
+        padding: 10px;
+        margin: 10px 5px;
+      }
+
+      .page:hover,
+      .next-previous:hover {
+        background-color: green;
+        color: white;
+      }
+
+      .next-previous {
+        background-color: white;
+        border: 1px solid green;
+        border-radius: 100px;
+        height: 32px;
+        width: 32px;
+      }
+      .navigation {
+        padding: auto;
+        stroke: green;
+        height: 25px;
+        width: 25px;
+      }
+      .navigation:hover {
+        stroke: white;
+      }
+
+      .mygreen {
+        background-color: green;
+        color: white;
+      }
+    </style>
   </head>
-  <body></body>
+
+  <body>
+    <div class="container">
+      <button class="next-previous">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="navigation"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+      </button>
+      <button class="page">1</button>
+      <button class="page">2</button>
+      <button class="page mygreen">3</button>
+      <button class="page">4</button>
+      <button class="page">5</button>
+      <button class="page">6</button>
+      <p>...</p>
+      <button class="page">23</button>
+      <button class="next-previous">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="navigation"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M9 5l7 7-7 7"
+          />
+        </svg>
+      </button>
+    </div>
+  </body>
 </html>
