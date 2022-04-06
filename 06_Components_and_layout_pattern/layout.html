@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Rubik", sans-serif;
+
+        display: grid;
+        grid-template-columns: 80px 300px 1fr 200px;
+        grid-template-rows: 100px 1fr;
+        height: 100vh;
+      }
+      nav {
+        display: flex;
+        justify-content: center;
+        background-color: #393e46;
+        grid-row: 1/-1;
+      }
+
+      header {
+        display: flex;
+        background-color: #aa96da;
+        grid-column: 2 / -1;
+        align-items: center;
+        gap: 10px;
+        padding: 0 40px;
+      }
+
+      section {
+        background-color: #dbe2ef;
+        overflow-y: scroll;
+        overflow-x: hidden;
+      }
+
+      main {
+      }
+
+      aside {
+        background-color: #dbe2ef;
+      }
+
+      nav p {
+        color: white;
+        margin-top: 20px;
+        font-weight: 900;
+        font-size: 20px;
+      }
+      .btn {
+        border: none;
+        padding: 5px;
+        background-color: #cca8e9;
+        color: rgb(45, 44, 44);
+      }
+
+      .btn:last-child {
+        margin-left: auto;
+      }
+
+      .email {
+        width: 90%;
+        height: 100px;
+        background-color: #c9d6df;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <p>NAV</p>
+    </nav>
+    <header>
+      <button class="btn">New</button>
+      <button class="btn">Reply</button>
+      <button class="btn">Forward</button>
+      <button class="btn">Mark Unread</button>
+      <button class="btn">Trash</button>
+    </header>
+    <section>
+      <div class="email"></div>
+      <div class="email"></div>
+      <div class="email"></div>
+      <div class="email"></div>
+      <div class="email"></div>
+      <div class="email"></div>
+      <div class="email"></div>
+      <div class="email"></div>
+      <div class="email"></div>
+      <div class="email"></div>
+      <div class="email"></div>
+    </section>
+    <main></main>
+    <aside></aside>
+  </body>
+</html>
