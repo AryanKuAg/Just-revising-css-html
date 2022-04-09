@@ -1,77 +1,86 @@
-const express = require('express')
-const Task = require('../models/task')
-const router = new express.Router()
+const express = require("express");
+const Task = require("../models/task");
+const router = new express.Router();
 
-router.post('/tasks', async (req, res) => {
-    const task = new Task(req.body)
+router.post("/tasks", async (req, res) => {
+  const task = new Task(req.body);
 
-    try {
-        await task.save()
-        res.status(201).send(task)
-    } catch (e) {
-        res.status(400).send(e)
-    }
-})
+  try {
+    await task.save();
+    res.status(201).send(task);
+  } catch (e) {
+    res.status(400).send(e);
+  }
+});
 
-router.get('/tasks', async (req, res) => {
-    try {
-        const tasks = await Task.find({})
-        res.send(tasks)
-    } catch (e) {
-        res.status(500).send()
-    }
-})
+router.get("/tasks", async (req, res) => {
+  try {
+    const tasks = await Task.find({});
+    res.send(tasks);
+  } catch (e) {
+    res.status(500).send();
+  }
+});
 
-router.get('/tasks/:id', async (req, res) => {
-    const _id = req.params.id
+router.get("/tasks/:id", async (req, res) => {
+  const _id = req.params.id;
 
-    try {
-        const task = await Task.findById(_id)
+  try {
+    const task = await Task.findById(_id);
 
-        if (!task) {
-            return res.status(404).send()
-        }
-
-        res.send(task)
-    } catch (e) {
-        res.status(500).send()
-    }
-})
-
-router.patch('/tasks/:id', async (req, res) => {
-    const updates = Object.keys(req.body)
-    const allowedUpdates = ['description', 'completed']
-    const isValidOperation = updates.every((update) => allowedUpdates.includes(update))
-
-    if (!isValidOperation) {
-        return res.status(400).send({ error: 'Invalid updates!' })
+    if (!task) {
+      return res.status(404).send();
     }
 
-    try {
-        const task = await Task.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true })
+    res.send(task);
+  } catch (e) {
+    res.status(500).send();
+  }
+});
 
-        if (!task) {
-            return res.status(404).send()
-        }
+router.patch("/tasks/:id", async (req, res) => {
+  const updates = Object.keys(req.body);
+  const allowedUpdates = ["description", "completed"];
+  const isValidOperation = updates.every((update) =>
+    allowedUpdates.includes(update)
+  );
 
-        res.send(task)
-    } catch (e) {
-        res.status(400).send(e)
+  if (!isValidOperation) {
+    return res.status(400).send({ error: "Invalid updates!" });
+  }
+
+  try {
+    // its my solution
+    const TaskDoc = await Task.findById(req.params.id);
+    updates.forEach((element) => {
+      TaskDoc[element] = req.body[element];
+    });
+
+    await TaskDoc.save();
+    // const task = await Task.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true })
+
+    if (!task) {
+      return res.status(404).send();
     }
-})
 
-router.delete('/tasks/:id', async (req, res) => {
-    try {
-        const task = await Task.findByIdAndDelete(req.params.id)
+    res.send(task);
+  } catch (e) {
+    res.status(400).send(e);
+  }
+});
 
-        if (!task) {
-            res.status(404).send()
-        }
+router.delete("/tasks/:id", async (req, res) => {
+  try {
+    const task = await Task.findByIdAndDelete(req.params.id);
 
-        res.send(task)
-    } catch (e) {
-        res.status(500).send()
+    if (!task) {
+      res.status(404).send();
     }
-})
 
-module.exports = router
+    res.send(task);
+  } catch (e) {
+    res.status(500).send();
+  }
+});
+
+module.exports = router;
